@@ -2,8 +2,11 @@ package unam.fca.dmoviles;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.time.LocalDateTime;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Para cambiar el texto de tv
-        tv.setText("Hola mundo");
+        tv.setText(LocalDateTime.now().toString());
 
         //Actividades
         //a) Agrega un evento  setOnClickListener al boton como viene en la referencia
@@ -37,5 +40,9 @@ public class MainActivity extends AppCompatActivity {
         //c) Sube tu codigo al repositorio.
         //d) Sube un documento en word a la plataforma Moodle con las capturas de pantalla de tu actividad. Incluye la liga a tu repositorio
 
+        btn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){}
+                                   }
+        );
     }
 }
